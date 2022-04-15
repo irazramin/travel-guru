@@ -3,9 +3,13 @@ header {
     z-index: 100000000000;
 }
 
-.navbar {
+.container {
     width: 1120px;
     margin: 0 auto;
+}
+
+.navbar {
+
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -48,4 +52,12 @@ header {
     font-weight: 500;
     font-size: 16px;
     color: #333;
+}
+
+.login-btn {
+    border: none;
+    padding: 6px 15px;
+    background-color: rgba(249, 165, 26, 1);
+    font-size: 16px;
+    cursor: pointer;
 }

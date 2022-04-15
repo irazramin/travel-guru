@@ -1,8 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import logo from '../../img/logo.png';
+import CustomLink from '../CustomLink/CustomLink';
 import './Header.css';
 const Header = () => {
+  const navigate = useNavigate()
     const navs = [
       { id: 1, link: 'home', path: '/home' },
       { id: 2, link: 'News', path: '/news' },
@@ -10,9 +12,13 @@ const Header = () => {
       { id: 4, link: 'Blog', path: '/blog' },
       { id: 1, link: 'Contact', path: '/contact' },
     ];
+
+    const handleLogin = () =>{
+        navigate('/login');
+    }
   return (
     <header>
-      <nav className='navbar'>
+      <nav className='navbar container'>
         <div className='nav-logo'>
           <img src={logo} alt='' />
         </div>
@@ -26,12 +32,17 @@ const Header = () => {
         <div className='nav-items'>
           <ul>
             {navs.map((item) => {
+              
               return (
                 <li>
-                  <Link to={item.path}>{item.link}</Link>
+                    <CustomLink to={item.path}>
+                      {item.link}
+                    </CustomLink>
                 </li>
+
               );
             })}
+            <button onClick={handleLogin} className='login-btn'>Login</button>
           </ul>
         </div>
       </nav>

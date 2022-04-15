@@ -1,0 +1,85 @@
+.login-container {
+    margin: 60px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.login-section {
+    width: 450px;
+    border: 1px solid #ABABAB;
+    padding: 40px;
+    border-radius: 6px;
+}
+
+h4 {
+    font-size: 24px;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.form-control input {
+    border: 0;
+    border-bottom: 1px solid #ABABAB;
+    padding: 3px;
+}
+
+input:focus {
+    outline: none;
+}
+
+.rem-forget {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.remember {
+    margin-bottom: 0;
+    display: block;
+}
+
+.forget-password {
+    background: none;
+    border: none;
+    text-decoration: underline;
+    color: rgba(249, 165, 26, 1);
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.create-acc {
+    text-align: center;
+    margin-top: 16px;
+}
+
+.login {
+    margin-top: 30px;
+    width: 100%;
+    border: none;
+    height: 50px;
+    background: #F9A51A;
+}
+
+.or {
+    margin-top: 24px;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.or p {
+    margin: 0 10px;
+}
+
+.or hr {
+    width: 50%;
+}
