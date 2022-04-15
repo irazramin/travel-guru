@@ -1,0 +1,16 @@
+.navbar ul li a {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    color: #333;
+}
+
+.nav-search {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid #333;
+    color: #333;
+}
+
+.nav-search::placeholder {
+    color: #333;
+}
