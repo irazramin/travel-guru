@@ -2,7 +2,8 @@
     margin-top: 200px;
     color: #fff;
     display: grid;
-    grid-template-columns: 5fr 6fr;
+    grid-template-columns: repeat(2, 1fr);
+    overflow-x: hidden;
 }
 
 .place-details h2 {
@@ -31,7 +32,7 @@
 
 .places {
     width: 800px;
-    overflow-x: hidden;
     position: absolute;
     right: 100px;
+
 }

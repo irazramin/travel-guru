@@ -1,7 +1,6 @@
 .place-info {
     display: flex;
-    z-index: -100;
-    width: 100%;
+    overflow: hidden;
 }
 
 .places-container {
@@ -19,6 +18,8 @@ img {
     box-shadow: 1px 5px 8px rgba(0, 0, 0, 0.5);
     overflow: hidden;
     border-radius: 20px;
+    border: 5px solid transparent;
+
 }
 
 h4 {
@@ -30,8 +31,8 @@ h4 {
 }
 
 .slider-btns {
-    position: fixed;
-    bottom: 150px;
+    position: absolute;
+    bottom: -150px;
     margin-left: 30px;
 }
 
@@ -45,7 +46,9 @@ h4 {
 }
 
 .active {
-    transform: translateX(-800px);
-    transition: transform .3s ease;
+    transition: transform .5s ease;
+}
 
+.current-select {
+    border: 5px solid rgba(251, 188, 4, 1);
 }
