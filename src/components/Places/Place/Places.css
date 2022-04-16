@@ -1,0 +1,51 @@
+.place-info {
+    display: flex;
+    z-index: -100;
+    width: 100%;
+}
+
+.places-container {
+    overflow-y: hidden;
+
+}
+
+.place {
+    position: relative;
+}
+
+img {
+    width: 270px;
+    margin: 0 15px;
+    box-shadow: 1px 5px 8px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+h4 {
+    position: absolute;
+    margin: 0;
+    left: 30px;
+    bottom: 20px;
+    font-size: 30px;
+}
+
+.slider-btns {
+    position: fixed;
+    bottom: 150px;
+    margin-left: 30px;
+}
+
+.slider-btns button {
+    border-radius: 50%;
+    width: 47px;
+    height: 47px;
+    border: none;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.active {
+    transform: translateX(-800px);
+    transition: transform .3s ease;
+
+}

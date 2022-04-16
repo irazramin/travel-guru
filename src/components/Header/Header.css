@@ -50,12 +50,15 @@ header {
     font-size: 16px;
 }
 
-.login-btn {
+.login-btn,
+.signOut {
     border: none;
     padding: 6px 15px;
     background-color: rgba(249, 165, 26, 1);
     font-size: 16px;
     cursor: pointer;
+    border-radius: 5px;
+
 }
 
 .light .nav-search {
@@ -84,4 +87,13 @@ header {
 
 .dark .navbar ul li a {
     color: #333 !important;
+}
+
+.user-profile {
+    margin: 0;
+    color: rgba(249, 165, 26, 1);
+}
+
+.signOut {
+    margin-left: 30px;
 }

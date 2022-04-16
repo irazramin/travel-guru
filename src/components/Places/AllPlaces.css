@@ -1,0 +1,37 @@
+.place-details {
+    margin-top: 200px;
+    color: #fff;
+    display: grid;
+    grid-template-columns: 5fr 6fr;
+}
+
+.place-details h2 {
+    font-size: 80px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.place-details p {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.booking-btn {
+    background: #F9A51A;
+    padding: 12px 30px;
+    border: 0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.places {
+    width: 800px;
+    overflow-x: hidden;
+    position: absolute;
+    right: 100px;
+}

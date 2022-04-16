@@ -1,43 +1,60 @@
-import React from 'react';
-
+import React, { useState } from 'react';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useNavigate } from 'react-router-dom';
+import auth from '../../firebase.init';
 const Registration = () => {
+  const navigate = useNavigate()
+  const [email,setEmail] = useState('')
+  const [pass,setPass] = useState('')
+  const [createUserWithEmailAndPassword, user, loading, error] =
+    useCreateUserWithEmailAndPassword(auth);
+  const SubmitRegisterAcc = (e) =>{
+      e.preventDefault();
+      createUserWithEmailAndPassword(email,pass);
+  }
+
+   const handleEmailInput = (e) => {
+     setEmail(e.target.value);
+   };
+   const handlePasswordInput = (e) => {
+     setPass(e.target.value);
+   };
+
+   const handleNavigateLoginPage = () =>{
+     navigate('/login');
+   }
   return (
     <div className='login-container'>
       <div className='login-section'>
         <h4>Create an account</h4>
-        <form>
+        <form onSubmit={SubmitRegisterAcc}>
           <div className='form-control'>
             <label htmlFor='fName'>First name</label>
-            <input type='text' name='fName' />
+            <input  type='text' name='fName' />
           </div>
           <div className='form-control'>
             <label htmlFor='lName'>Last name</label>
-            <input type='text' name='lName' />
+            <input  type='text' name='lName' />
           </div>
           <div className='form-control'>
             <label htmlFor='email'>Username or Email</label>
-            <input type='text' name='email' />
+            <input onBlur={handleEmailInput}  type='text' name='email' />
           </div>
           <div className='form-control'>
             <label htmlFor='password'>Password</label>
-            <input type='password' name='password' />
+            <input onBlur={handlePasswordInput} type='password' name='password' />
           </div>
           <div className='form-control'>
             <label htmlFor='cPassword'>Confirm password</label>
-            <input type='password' name='cPassword' />
+            <input  type='password' name='cPassword' />
           </div>
-          <div className='rem-forget'>
-            <div className='form-control remember'>
-              <input type='checkbox' name='rememberme' />
-              <label htmlFor='rememberme'>Remember Me</label>
-            </div>
-            <button className='forget-password'>Forget password?</button>
-          </div>
-          <button className='login'>Login</button>
+          <button className='login'>Register</button>
           <div className='create-acc'>
             <p>
-              Don’t have an account?{' '}
-              <button className='forget-password'> Create an account</button>
+              Already have an account?
+              <button onClick={handleNavigateLoginPage} className='forget-password'>
+                Login
+              </button>
             </p>
           </div>
         </form>
@@ -49,6 +66,6 @@ const Registration = () => {
       </div>
     </div>
   );
-}
+};
 
-export default Registration
+export default Registration;

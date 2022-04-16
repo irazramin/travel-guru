@@ -1,6 +1,6 @@
 import React from 'react';
 import DefaultLayout from '../Layout/DefaultLayout';
-import Places from '../Places/Places';
+import Places from '../Places/AllPlaces';
 import './Home.css';
 const Home = () => {
   return (
