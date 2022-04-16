@@ -1,9 +1,12 @@
 import React from 'react';
-import './News.module.css';
+import DefaultLayout from '../Layout/DefaultLayout';
+import './News.css';
 const News = () => {
   return (
-    <div>News</div>
-  )
+    <DefaultLayout theme="dark">
+      <div>News</div>
+    </DefaultLayout>
+  );
 }
 
 export default News

@@ -28,8 +28,6 @@ header {
     height: 30px;
     padding: 0 10px;
     border-radius: 6px;
-    border: 1px solid #333;
-
 }
 
 .nav-search:focus {
@@ -40,7 +38,6 @@ header {
     list-style-type: none;
     display: flex;
     justify-content: space-around;
-
 }
 
 .navbar ul li {
@@ -51,7 +48,6 @@ header {
     text-decoration: none;
     font-weight: 500;
     font-size: 16px;
-    color: #333;
 }
 
 .login-btn {
@@ -60,4 +56,32 @@ header {
     background-color: rgba(249, 165, 26, 1);
     font-size: 16px;
     cursor: pointer;
+}
+
+.light .nav-search {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid #fff !important;
+    color: #fff !important;
+}
+
+.light .nav-search::placeholder {
+    color: #fff !important;
+}
+
+.light .navbar ul li a {
+    color: #fff !important;
+}
+
+.dark .nav-search {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid #333 !important;
+    color: #333 !important;
+}
+
+.dark .nav-search::placeholder {
+    color: #333 !important;
+}
+
+.dark .navbar ul li a {
+    color: #333 !important;
 }

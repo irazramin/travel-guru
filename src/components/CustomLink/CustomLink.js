@@ -3,9 +3,10 @@ import './CustomLink.css';
 function CustomLink({ children, to, ...props }) {
   let resolved = useResolvedPath(to);
   let match = useMatch({ path: resolved.pathname, end: true });
+  const path = to === '/home';
 
-  console.log(to)
-    const path = to === '/home';
+  
+
   return (
     <div>
       <Link

@@ -1,15 +1,18 @@
 import React from 'react';
+import DefaultLayout from '../Layout/DefaultLayout';
 import Places from '../Places/Places';
 import './Home.css';
 const Home = () => {
   return (
-    <div className='home-container '>
-      <div className='home-over'>
-        <div className="container">
-        <Places />
+    <DefaultLayout>
+      <div className='home-container '>
+        <div className='home-over'>
+          <div className='container'>
+            <Places />
+          </div>
         </div>
       </div>
-    </div>
+    </DefaultLayout>
   );
 }
 

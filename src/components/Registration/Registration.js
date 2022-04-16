@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Registration = () => {
-  const [] = useCrea
   return (
     <div className='login-container'>
       <div className='login-section'>
